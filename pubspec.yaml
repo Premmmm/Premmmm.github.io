@@ -1,0 +1,31 @@
+name: portfolio
+description: My portfolio website.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  draggable_scrollbar: ^0.0.4
+  flutter_signin_button: ^1.1.0
+  google_fonts: ^2.0.0
+  peanut: ^3.7.0
+  universal_io: ^1.0.1
+  url_launcher: ^5.7.8
+  zoom_widget: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/
+    - icons/

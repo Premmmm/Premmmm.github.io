@@ -21,13 +21,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
   Widget _currentSelectedWidgt = About();
   int currentIndex = 0;
 
-  // void scrollTo(double val) {
-  //   _scrollController.animateTo(
-  //     val,
-  //     duration: Duration(seconds: 1, milliseconds: 250),
-  //     curve: Curves.fastOutSlowIn,
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {

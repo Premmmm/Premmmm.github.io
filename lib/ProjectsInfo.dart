@@ -18,7 +18,7 @@ class Projects extends StatelessWidget {
             color: Colors.deepPurpleAccent,
           ),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -71,9 +71,7 @@ class _ProjectDetails extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
-            height: 5,
-          ),
+          const SizedBox(height: 5),
           Text(
             'Description',
             style: info.style.copyWith(

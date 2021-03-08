@@ -33,7 +33,7 @@ class ExperienceInfo extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -109,9 +109,7 @@ class EducationInfo extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(
-          height: 30,
-        ),
+        const SizedBox(height: 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -148,7 +146,7 @@ class _EducationDetailWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[850]),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 info.educationalInfo[i].passout,
                 style: info.style.copyWith(

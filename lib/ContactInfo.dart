@@ -34,7 +34,8 @@ class Contact extends StatelessWidget {
                       text: 'S ',
                       style: info.style.copyWith(
                         color: Colors.deepPurple[800],
-                        fontSize: Platform.isAndroid || Platform.isIOS? 35 : 50,
+                        fontSize:
+                            Platform.isAndroid || Platform.isIOS ? 35 : 50,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),
@@ -43,61 +44,51 @@ class Contact extends StatelessWidget {
                       text: 'PREM RAJ',
                       style: info.style.copyWith(
                         color: Colors.white,
-                        fontSize: Platform.isAndroid || Platform.isIOS? 35 : 50,
+                        fontSize:
+                            Platform.isAndroid || Platform.isIOS ? 35 : 50,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),
                     ),
                   ]),
                 ),
-                
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   children: [
                     _SignInButtonWidget(
                       button: Buttons.Email,
                       url: 'mailto:premraj37.pr@gmail.com',
                     ),
-                    SizedBox(
-                      width: 8,
-                    ),
+                    const SizedBox(width: 8),
                     _SignInButtonWidget(
                       button: Buttons.GitHub,
                       url: 'https://github.com/Premmmm?tab=repositories',
                     ),
-                    SizedBox(
-                      width: 8,
-                    ),
+                    const SizedBox(width: 8),
                     _SignInButtonWidget(
                       button: Buttons.LinkedIn,
                       url: 'https://www.linkedin.com/in/prem-raj-16042711/',
                     ),
-                    SizedBox(
-                      width: 8,
-                    ),
+                    const SizedBox(width: 8),
                     _SignInButtonWidget(
                       button: Buttons.Twitter,
                       url: 'https://twitter.com/prem___raj',
                     ),
-                    SizedBox(
-                      width: 8,
-                    ),
+                    const SizedBox(width: 8),
                     _SignInButtonWidget(
                       button: Buttons.Facebook,
                       url:
                           'https://www.facebook.com/profile.php?id=100007033329167',
                     ),
-                    SizedBox(
-                      width: 8,
-                    ),
+                    SizedBox(width: 8),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   'Setting small goals will lead to a great victory !',
                   style: info.style.copyWith(
                     color: Colors.white,
-                    fontSize: Platform.isAndroid || Platform.isIOS? 14 : 20,
+                    fontSize: Platform.isAndroid || Platform.isIOS ? 14 : 20,
                   ),
                 ),
               ],
@@ -118,7 +109,7 @@ class Contact extends StatelessWidget {
               ),
             ),
             child: CircleAvatar(
-              radius: Platform.isAndroid|| Platform.isIOS ? 30 : 100,
+              radius: Platform.isAndroid || Platform.isIOS ? 30 : 100,
               backgroundImage: AssetImage('images/DP.jpg'),
             ),
           ),

@@ -19,12 +19,11 @@ class Awards extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(
-          height: 5,
-        ),
+        const SizedBox(height: 5),
         ListTile(
           leading:
-              Image.asset('icons/medal-2-fill.png', color: Colors.yellow[700]),
+              Icon(Icons.military_tech, size: 26, color: Colors.yellow[700]),
+          // Image.asset('icons/medal-2-fill.png', color: Colors.yellow[700]),
           title: Text(
             'Award Of Appreciation IETE  ( 2020 )',
             style: info.style.copyWith(
@@ -33,9 +32,7 @@ class Awards extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          height: 50,
-        ),
+        const SizedBox(height: 50),
         Text(
           'ACHIEVEMENTS',
           style: info.style.copyWith(
@@ -43,9 +40,7 @@ class Awards extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(
-          height: 8,
-        ),
+        const SizedBox(height: 8),
         Text(
           'TECHNICAL',
           style: info.style.copyWith(
@@ -53,7 +48,7 @@ class Awards extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +60,7 @@ class Awards extends StatelessWidget {
               )
           ],
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
           'EXTRACURRICULAR',
           style: info.style.copyWith(
@@ -73,9 +68,7 @@ class Awards extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.deepPurpleAccent),
         ),
-        SizedBox(
-          height: 10,
-        ),
+        const SizedBox(height: 10),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,10 +100,10 @@ class _AchievementsInfo extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: 10),
       child: ListTile(
-        leading:
-            Image.asset('icons/trophy-fill.png', color: Colors.yellow[700]),
+        leading: Icon(Icons.emoji_events, color: _info.color),
+        //  Image.asset('icons/trophy-fill.png', color: Colors.yellow[700]),
         title: Text(
-          _info,
+          _info.achievement,
           style: info.style.copyWith(
             fontSize: Platform.isWindows || Platform.isMacOS ? 20 : 14,
             color: Colors.grey[800],

@@ -81,20 +81,42 @@ class Info {
     ),
   ];
 
-  List<String> technicalAchievements = [
-    'Best UI/UX Ease-The-Error 1.0  Hackathon  ( 2020 )',
-    'Winners in SVCE QuarantBuster ( 2020 )',
-    'Winners in SVCE Make - a - Thon 2.0 ( 2020 )',
-    'Winners in SVCE Make - a - Thon 1.0 ( 2020 )',
-    'Winners in Project Expo IETE Innovation Meet ( 2019 )',
-    'Winners in Project Expo IETE Zonal Seminar ( 2019 )',
-    "Winners in Project Expo SHRISHTI'19 ( 2019 )",
-    "Runners Up Speed - o - Track SHRISHTI'19 ( 2019 )"
+  List<Achievements> technicalAchievements = [
+    Achievements(
+        achievement: 'Best UI/UX Ease-The-Error 1.0  Hackathon  ( 2020 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: 'Winners in SVCE QuarantBuster ( 2020 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: 'Winners in SVCE Make - a - Thon 2.0 ( 2020 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: 'Winners in SVCE Make - a - Thon 1.0 ( 2019 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: 'Winners in Project Expo IETE Innovation Meet ( 2019 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: 'Winners in Project Expo IETE Zonal Seminar ( 2019 )',
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: "Winners in Project Expo SHRISHTI'19 ( 2019 )",
+        color: Colors.yellow[700]),
+    Achievements(
+        achievement: "Runners Up Speed - o - Track SHRISHTI'19 ( 2019 )",
+        color: Color(0xFFC0C0C0)),
   ];
 
-  List<String> extraCurricularAchievements = [
-    "Runners Up Anna University Mens Badminton Inter Zone Tournament ( 2018 )",
-    "Runners Up Anna University Mens Badminton Inter Zone Tournament ( 2017 )"
+  List<Achievements> extraCurricularAchievements = [
+    Achievements(
+        achievement:
+            "Runners Up Anna University Mens Badminton Inter Zone Tournament ( 2018 )",
+        color: Color(0xFFC0C0C0)),
+    Achievements(
+        achievement:
+            "Runners Up Anna University Mens Badminton Inter Zone Tournament ( 2017 )",
+        color: Color(0xFFC0C0C0)),
   ];
 
   List<ProjectAndDetails> projectDetails = [
@@ -228,7 +250,7 @@ class Info {
         organization: 'Robotics and Artificial Intelligence Club SVCE',
         duration: 'June 2020 - June 2021',
         description:
-            'As a mentor we train second year students on basics of programming, embedded systems, robotics, app dev, web dev, ML, DL etc'),
+            'As a mentor we train students on basics of programming, embedded systems, robotics, app development etc.'),
     Experience(
       name: 'IoT Intern',
       organization: 'Experts HUB',
@@ -310,4 +332,10 @@ class Experience {
   final organization;
   final description;
   Experience({this.name, this.organization, this.duration, this.description});
+}
+
+class Achievements {
+  final String achievement;
+  final Color color;
+  Achievements({this.color, this.achievement});
 }

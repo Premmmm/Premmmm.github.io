@@ -18,6 +18,7 @@ dependencies:
   universal_io: ^1.0.1
   url_launcher: ^5.7.8
   zoom_widget: ^0.1.3
+  animations: ^2.0.0
 
 dev_dependencies:
   flutter_test:

@@ -21,13 +21,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
   Widget _currentSelectedWidgt = About();
   int currentIndex = 0;
 
-  void scrollTo(double val) {
-    _scrollController.animateTo(
-      val,
-      duration: Duration(seconds: 1, milliseconds: 250),
-      curve: Curves.fastOutSlowIn,
-    );
-  }
+  // void scrollTo(double val) {
+  //   _scrollController.animateTo(
+  //     val,
+  //     duration: Duration(seconds: 1, milliseconds: 250),
+  //     curve: Curves.fastOutSlowIn,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
         child: Scaffold(
           body: Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 height: MediaQuery.of(context).size.height,
@@ -56,12 +55,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
                             width: 5,
                           ),
                         ),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 80,
                           backgroundImage: AssetImage('images/DP.jpg'),
                         ),
                       ),
-                      SizedBox(height: 50),
+                      const SizedBox(height: 50),
                       Container(
                         height: 70,
                         alignment: Alignment.center,
@@ -92,8 +91,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 .copyWith(fontSize: 20, color: Colors.white),
                           ),
                           trailing: currentIndex == 0
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                       Container(
@@ -126,8 +126,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 .copyWith(fontSize: 20, color: Colors.white),
                           ),
                           trailing: currentIndex == 1
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                       Container(
@@ -160,8 +161,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 .copyWith(fontSize: 20, color: Colors.white),
                           ),
                           trailing: currentIndex == 2
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                       Container(
@@ -194,8 +196,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 .copyWith(fontSize: 20, color: Colors.white),
                           ),
                           trailing: currentIndex == 3
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                       Container(
@@ -226,8 +229,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                               style: info.style
                                   .copyWith(fontSize: 19, color: Colors.white)),
                           trailing: currentIndex == 4
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                       Container(
@@ -260,8 +264,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
                                 .copyWith(fontSize: 20, color: Colors.white),
                           ),
                           trailing: currentIndex == 5
-                              ? Icon(Icons.arrow_forward, color: Colors.white)
-                              : SizedBox(),
+                              ? const Icon(Icons.arrow_forward,
+                                  color: Colors.white)
+                              : const SizedBox(),
                         ),
                       ),
                     ],
@@ -284,10 +289,17 @@ class _PortfolioPageState extends State<PortfolioPage> {
                           AnimatedSwitcher(
                             transitionBuilder:
                                 (Widget child, Animation<double> animation) =>
-                                    ScaleTransition(
+                                    SlideTransition(
+                              position: Tween<Offset>(
+                                begin: const Offset(0, 1),
+                                end: Offset.zero,
+                              ).animate(animation),
                               child: child,
-                              scale: animation,
                             ),
+                            //         ScaleTransition(
+                            //   child: child,
+                            //   scale: animation,
+                            // ),
                             duration: Duration(milliseconds: 200),
                             child: _currentSelectedWidgt,
                           ),

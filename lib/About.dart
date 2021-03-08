@@ -37,20 +37,20 @@ class About extends StatelessWidget {
             ),
           ),
           _ContactDetailsWidget(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Flutter Developer | Embedded Systems | Robotics | IoT',
             style: info.style.copyWith(fontSize: 30, color: Colors.grey[500]),
           ),
-          SizedBox(height: 40),
-          SizedBox(
+          const SizedBox(height: 40),
+          const SizedBox(
             height: 4,
             child: Divider(
               color: Colors.indigo,
               thickness: 5,
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Text(
             'SKILLS',
             style: info.style.copyWith(
@@ -58,7 +58,7 @@ class About extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurpleAccent),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           _SkillsContainerWidget(),
         ],
       ),
